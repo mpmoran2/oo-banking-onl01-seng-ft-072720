@@ -1,13 +1,18 @@
 class BankAccount
   attr_accessor :name, :balance, :status
   
-  def initialize(account_name)
+  def initialize(name)
+    @name = name 
+    @balance = 1000
+    @status = open 
   end 
   
   def deposit
+    @balance += amount
   end 
   
   def display_balance
+    "Your balance is #{balance}."
   end 
   
   def valid?
